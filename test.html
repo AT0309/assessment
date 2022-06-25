@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="APItest.css">
+</head>
+<body>
+    <h1 id="title">登録</h1>
+    <form action="">
+    <table border="1">
+        <tr>
+            <th>氏名<sup>*</sup></th>
+            <td><input type="text" placeholder="フルネーム" required></td>
+        </tr>
+        <tr>
+            <th>メールアドレス<sup>*</sup></th>
+            <td><input type="email" placeholder="****@****.com" id="mail-adress" required></td>
+        </tr>
+        <tr>
+            <th>都道府県<sup>*</sup></th>
+            <td><select name="" id="prefecture" onchange="update()" required>
+                <option hidden>選択してください</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>市区町村<sup>*</sup></th>
+            <td><select name="" id="city" required></select></td>
+        </tr>
+        <tr>
+            <th>住所<sup>*</sup></th>
+            <td><input type="text" class="live" required></td>
+        </tr>
+    </table>
+    <input type="button" id="submit" class="button" value="決定" onclick="entry()">
+    </form>
+    <div id="confirmation"></div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="APItest.js"></script>
+</body>
+</html>
